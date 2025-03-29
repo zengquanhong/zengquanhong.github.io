@@ -38,7 +38,9 @@ cat system_report.txt
 ## 使用方法
 
 步骤 1：将脚本内容保存为 `create_users.sh` 文件。
+
 步骤 2：创建一个名为 `user_list.txt` 的文件，在该文件中按行列出需要创建的用户名，例如：Bob Alice Caveil Davide
+
 步骤 3：在终端中执行以下命令，为脚本添加执行权限：
 ```bash
 chmod +x create_users.sh
