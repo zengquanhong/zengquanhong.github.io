@@ -3,6 +3,9 @@ from tkinter import messagebox
 
 # 计算阶乘的函数
 def factorial(n):
+    if n < 0:
+        print("计算阶乘n为非负整数！")
+        return None  # 返回 None 表示无效输入
     result = 1
     for i in range(1, n + 1):
         result *= i
@@ -34,7 +37,10 @@ def calculate():
 
         if choice == 1:
             result = factorial(n)
-            messagebox.showinfo("结果", f"{n} 的阶乘是 {result}")
+            if result is not None:  # 确保计算结果有效
+                messagebox.showinfo("结果", f"{n} 的阶乘是 {result}")
+            else:
+                messagebox.showerror("错误", "阶乘计算失败，请输入非负整数")
         elif choice == 2:
             result = "是质数" if is_prime(n) else "不是质数"
             messagebox.showinfo("结果", f"{n} {result}")
@@ -48,7 +54,7 @@ def calculate():
 
 # 创建主窗口
 root = tk.Tk()
-root.title("功能选择")
+root.title("Python 功能选择")
 
 # 标签
 label = tk.Label(root, text="请输入一个数字:")
