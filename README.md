@@ -25,6 +25,7 @@ chmod +x sys_info.sh
 cat system_report.txt
 ```
 ## 截图
-![Uploading 1743252113597.jpg…]()
+![task1](task1e.png)
+
 
 # （3）任务 2:批量创建用户
