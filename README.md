@@ -1,4 +1,4 @@
-# 曾权宏 324080203112 机械241班
+# 曾权宏 324080203112 机械241班 github：https://github.com/zengquanhong/zengquanhong.github.io/
 -----------------------------------------
 # （1）3_27 函数与循环.py：实现多种计算功能。
 ```python
@@ -89,22 +89,25 @@ root.mainloop()
 ```bash
 #!/bin/bash
 
-# 从 user_list.txt 文件中读取每个用户名
-while IFS= read -r username
-do
-    # 检查用户是否已经存在
-    if id "$username" &>/dev/null; then
-        echo "用户 $username 已存在，跳过创建。"
-    else
-        # 创建新用户
-        useradd "$username"
-        if [ $? -eq 0 ]; then
-            echo "用户 $username 创建成功！"
-        else
-            echo "创建用户 $username 失败！"
-        fi
-    fi
-done < user_list.txt
+# 获取当前用户名
+echo "当前用户: $(whoami)" >> system_report.txt
+
+# 获取当前系统时间
+echo "当前时间: $(date)" >> system_report.txt
+
+# 获取系统 CPU 负载情况
+echo "CPU 负载情况: $(uptime)" >> system_report.txt
+
+# 获取磁盘使用情况
+echo "磁盘使用情况: " >> system_report.txt
+df -h >> system_report.txt
+
+# 获取内存使用情况
+echo "内存使用情况: " >> system_report.txt
+free -m >> system_report.txt
+
+echo "系统信息已保存到 system_report.txt"
+
 ```
 
 ## 功能描述
@@ -135,7 +138,24 @@ cat system_report.txt
 
 # （3）任务 2:批量创建用户
 ```bash
+#!/bin/bash
 
+# 从 user_list.txt 文件中读取每个用户名
+while IFS= read -r username
+do
+    # 检查用户是否已经存在
+    if id "$username" &>/dev/null; then
+        echo "用户 $username 已存在，跳过创建。"
+    else
+        # 创建新用户
+        useradd "$username"
+        if [ $? -eq 0 ]; then
+            echo "用户 $username 创建成功！"
+        else
+            echo "创建用户 $username 失败！"
+        fi
+    fi
+done < user_list.txt
 ```
 ## 功能描述
 
