@@ -7,7 +7,7 @@
 - `R0 = 8.3` kpc（太阳到银河系中心的距离）
 - `A = 20.41`, `a = 9.03`, `b = 13.99`, `Rpu = 3.76`
 
-
+## 代码
 ```python
 import numpy as np
 from scipy.optimize import minimize_scalar
@@ -77,3 +77,4 @@ plt.savefig('distribution.png')
 plt.show()
 ```
 ## 结果
+![task1](images/2025-04-14_17-14-46.png)
