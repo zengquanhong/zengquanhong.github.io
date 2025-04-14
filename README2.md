@@ -76,3 +76,4 @@ plt.grid(True)
 plt.savefig('distribution.png')
 plt.show()
 ```
+## 结果
