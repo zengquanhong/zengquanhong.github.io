@@ -89,4 +89,10 @@ print("✅ 所有图像已生成并保存在 iris_nn_plots 文件夹中。")
 ## 实验结果图
 
 下方展示了不同神经元数量对应的决策边界图：
-
+![task1](nn_hidden_1.png)
+![task1](nn_hidden_2.png)
+![task1](nn_hidden_3.png)
+![task1](nn_hidden_4.png)
+![task1](nn_hidden_5.png)
+![task1](nn_hidden_6.png)
+![task1](nn_hidden_7.png)
